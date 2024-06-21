@@ -12,25 +12,25 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+[node name="player" type="CharacterBody2D" parent="."]
 position = Vector2(288, 162)
 script = ExtResource("1_8ixm1")
 
-[node name="design_player" type="Sprite2D" parent="CharacterBody2D"]
+[node name="design_player" type="Sprite2D" parent="player"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="player"]
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(288, 162)
 zoom = Vector2(2, 2)
 
-[node name="Enviroment" type="Node" parent="."]
+[node name="enviroment" type="Node" parent="."]
 
-[node name="wall_design" type="Sprite2D" parent="Enviroment"]
+[node name="background_wall" type="Sprite2D" parent="enviroment"]
 z_index = 1
 position = Vector2(288, 180)
 texture = ExtResource("2_xj23l")
 
-[node name="floor design" type="Sprite2D" parent="Enviroment"]
+[node name="background_floor" type="Sprite2D" parent="enviroment"]
 position = Vector2(288, 157)
 texture = ExtResource("3_vj1p5")

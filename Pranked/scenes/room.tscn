@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://dft06l7j2iur2"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_8ixm1"]
-[ext_resource type="Texture2D" uid="uid://cjp7lwcv4cgn" path="res://assests/Player Dummy copy.png" id="2_anihb"]
+[ext_resource type="Texture2D" uid="uid://b8tabpbw1gpk2" path="res://assests/Player Design .v1.png" id="2_obdvv"]
 [ext_resource type="Texture2D" uid="uid://c67up4354r56h" path="res://assests/Wall design copy.png" id="2_xj23l"]
 [ext_resource type="Texture2D" uid="uid://b0305l5fi3jus" path="res://assests/Floor design - Copy copy 2.png" id="3_vj1p5"]
 
@@ -14,12 +14,12 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="player" type="CharacterBody2D" parent="."]
-position = Vector2(288, 162)
+position = Vector2(288, 178)
 script = ExtResource("1_8ixm1")
 
 [node name="design_player" type="Sprite2D" parent="player"]
 z_index = 2
-texture = ExtResource("2_anihb")
+texture = ExtResource("2_obdvv")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="player"]
 

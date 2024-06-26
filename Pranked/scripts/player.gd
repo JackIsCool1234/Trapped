@@ -27,4 +27,3 @@ func _input(event):
 			direction = 1
 		print(destination)
 		print(direction)
-		

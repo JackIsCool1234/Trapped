@@ -1,5 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://dft06l7j2iur2"]
+[gd_scene load_steps=5 format=3 uid="uid://dft06l7j2iur2"]
 
+[ext_resource type="Script" path="res://scripts/Control.gd" id="1_ar6rr"]
 [ext_resource type="Script" path="res://scripts/Player_Motion.gd" id="1_gfwk1"]
 [ext_resource type="Texture2D" uid="uid://ryrh6q5i4mao" path="res://assests/player dummy small.png" id="2_wkt0t"]
 [ext_resource type="Texture2D" path="res://assests/Room design.png" id="3_gcm06"]
@@ -11,6 +12,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_ar6rr")
 
 [node name="player" type="CharacterBody2D" parent="."]
 z_index = 3
@@ -20,6 +22,8 @@ script = ExtResource("1_gfwk1")
 [node name="playerSprite" type="Sprite2D" parent="player"]
 z_index = 2
 texture = ExtResource("2_wkt0t")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="player"]
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(160, 101)

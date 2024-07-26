@@ -1,11 +1,18 @@
 extends Control
 
+enum{IDLE, MOVE, CLIMB, INTERACT}
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
+@onready var nav2D : NavigationRegion2D = $Navigation2D
+@onready var line2D : Line2D = $Line2D
+@onready var Player : CharacterBody2D = $Player
 
+func _input(event): 
+	if !Input.is_action_pressed("ui_leftMouseClick"):
+		return
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
+	var new_path = nav2D.get_simple_path(Player.get_global_position(), get_global_mouse_position())
+	
+	line2D.points = new_path 
+	
+	Player.path = new_path
+	Player.change_state(MOVE)

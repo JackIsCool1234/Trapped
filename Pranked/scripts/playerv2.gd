@@ -19,6 +19,13 @@ var margin = 1
 func _ready():
 	destination = position
 
+func change_state(newState):
+	state = newState
+	match state: 
+		idle:
+			self.play("idle")
+		walk:
+			self.play("walk")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):

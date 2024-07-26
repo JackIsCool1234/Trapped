@@ -7,9 +7,11 @@ var snapPosition = Vector2()
 
 var path : PackedVector2Array
 
+@export var speed = 250
+
 enum{idle, walk, interact, speak}
 
-@export var speed = 250
+var state = idle
 
 var margin = 1
 

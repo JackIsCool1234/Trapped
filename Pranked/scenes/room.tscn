@@ -1,10 +1,10 @@
 [gd_scene load_steps=8 format=3 uid="uid://dft06l7j2iur2"]
 
 [ext_resource type="Script" path="res://scripts/room.gd" id="1_5ymsr"]
-[ext_resource type="Script" path="res://scripts/playerv2.gd" id="1_gfwk1"]
 [ext_resource type="Texture2D" uid="uid://b8tabpbw1gpk2" path="res://assests/Player Design .v1.png" id="2_obdvv"]
 [ext_resource type="Texture2D" uid="uid://ryrh6q5i4mao" path="res://assests/player dummy small.png" id="2_wkt0t"]
 [ext_resource type="Texture2D" uid="uid://dw2tms0jos7b8" path="res://assests/Room design.png" id="3_gcm06"]
+[ext_resource type="Script" path="res://playerv2.gd" id="4_bt80r"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_jucke"]
 animations = [{
@@ -41,13 +41,13 @@ script = ExtResource("1_5ymsr")
 [node name="player" type="CharacterBody2D" parent="."]
 z_index = 3
 position = Vector2(160, 177)
-script = ExtResource("1_gfwk1")
 
 [node name="playerSprite" type="AnimatedSprite2D" parent="player"]
 z_index = 2
 sprite_frames = SubResource("SpriteFrames_jucke")
 animation = &"idle"
 offset = Vector2(0, -30)
+script = ExtResource("4_bt80r")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="player"]
 
@@ -65,3 +65,4 @@ texture = ExtResource("3_gcm06")
 navigation_polygon = SubResource("NavigationPolygon_51xux")
 
 [node name="Line2D" type="Line2D" parent="."]
+z_index = 4

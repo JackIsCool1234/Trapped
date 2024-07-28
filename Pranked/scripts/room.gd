@@ -1,10 +1,10 @@
 extends Control
 
-enum{IDLE, MOVE, CLIMB, INTERACT}
+enum{idle, walk, interact, speak}
 
 @onready var nav2D : NavigationRegion2D = $Navigation2D
 @onready var line2D : Line2D = $Line2D
-@onready var Player : CharacterBody2D = $Player
+@onready var Player : AnimatedSprite2D = $Player
 
 func _input(event): 
 	if !Input.is_action_pressed("ui_leftMouseClick"):
@@ -15,4 +15,4 @@ func _input(event):
 	line2D.points = new_path 
 	
 	Player.path = new_path
-	Player.change_state(MOVE)
+	Player.change_state(walk)

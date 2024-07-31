@@ -38,12 +38,9 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_5ymsr")
 
-[node name="player" type="CharacterBody2D" parent="."]
-z_index = 3
-position = Vector2(160, 177)
-
-[node name="playerSprite" type="AnimatedSprite2D" parent="player"]
+[node name="playerSprite" type="AnimatedSprite2D" parent="."]
 z_index = 2
+position = Vector2(160, 177)
 sprite_frames = SubResource("SpriteFrames_jucke")
 animation = &"idle"
 offset = Vector2(0, -30)

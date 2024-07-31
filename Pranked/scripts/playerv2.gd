@@ -55,8 +55,7 @@ func change_state(newState):
 		walk:
 			self.play("walk")
 
-## Old movement function
-# Called every frame. 'delta' is the elapsed time since the previous frame.
+## Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 	#if(position != destination):
 		#distance = Vector2(destination - position)
@@ -78,7 +77,7 @@ func change_state(newState):
 		#
 	#pass
 	#
-# Original input for left mouse click, relocated to room script
+## Original input for left mouse click, relocated to room script
 #func _input(event): 
 	#if Input.is_action_pressed("ui_leftMouseClick"):
 		#destination = get_global_mouse_position()

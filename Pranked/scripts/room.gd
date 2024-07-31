@@ -4,7 +4,7 @@ enum{idle, walk, interact, speak}
 
 @onready var nav2D : NavigationRegion2D = $Navigation2D
 @onready var line2D : Line2D = $Line2D
-@onready var Player : AnimatedSprite2D = $Player
+@onready var Player : CharacterBody2D = $Player
 
 func _input(event): 
 	if !Input.is_action_pressed("ui_leftMouseClick"):

@@ -1,24 +1,24 @@
-extends AnimatedSprite2D
+extends CharacterBody2D
 
 
 var destination = Vector2()
 var distance = Vector2()
 var velocity = Vector2()
 #var snapPosition = Vector2()
-#
+
 #var path : PackedVector2Array
 
 @export var speed = 250
 
 #enum{idle, walk, interact, speak}
-#
+
 #var state = idle
-#
+
 #var margin = 1
-#
-## Called when the node enters the scene tree for the first time.
-#func _ready():
-	#destination = position
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	destination = position
 #
 ## Movement
 #func _process(delta):
@@ -29,7 +29,7 @@ var velocity = Vector2()
 		#walk:
 			#move_along_path(move_distance)
 	#pass		
-#
+
 ## Declaring move_along_path function
 #func move_along_path(distance):
 	#var starting_point : = position 
@@ -46,7 +46,7 @@ var velocity = Vector2()
 		#if(path.size() == 0):
 			#change_state(idle)
 	#pass
-#
+
 ## Change in animation and idle and walking stages
 #func change_state(newState):
 	#state = newState

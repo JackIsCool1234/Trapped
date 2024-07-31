@@ -49,8 +49,6 @@ animation = &"idle"
 offset = Vector2(0, -30)
 script = ExtResource("4_bt80r")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="player"]
-
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(160, 101)
 zoom = Vector2(3.6, 3.3)

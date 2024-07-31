@@ -10,7 +10,7 @@ func _input(event):
 	if !Input.is_action_pressed("ui_leftMouseClick"):
 		return
 
-	var new_path = nav2D.get_simple_path(Player.get_global_position(), get_global_mouse_position())
+	var new_path = nav2d.get_simple_path(Player.get_global_position(), get_global_mouse_position())
 	
 	line2D.points = new_path 
 	

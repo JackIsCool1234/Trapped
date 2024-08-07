@@ -1,16 +1,56 @@
-[gd_scene load_steps=8 format=3 uid="uid://dft06l7j2iur2"]
+[gd_scene load_steps=21 format=3 uid="uid://dft06l7j2iur2"]
 
-[ext_resource type="Script" path="res://scripts/room.gd" id="1_5ymsr"]
+[ext_resource type="Script" path="res://scenes/playerv2.gd" id="1_4lljd"]
 [ext_resource type="Texture2D" uid="uid://b8tabpbw1gpk2" path="res://assests/Player Design .v1.png" id="2_obdvv"]
-[ext_resource type="Texture2D" uid="uid://ryrh6q5i4mao" path="res://assests/player dummy small.png" id="2_wkt0t"]
-[ext_resource type="Texture2D" uid="uid://dw2tms0jos7b8" path="res://assests/Room design.png" id="3_gcm06"]
-[ext_resource type="Script" path="res://scripts/playerv2.gd" id="4_bt80r"]
+[ext_resource type="Texture2D" uid="uid://bmw0tg4u6unbg" path="res://assests/knightIdleStance.1.png" id="2_uycfm"]
+[ext_resource type="Texture2D" uid="uid://bkcj0jmxary0x" path="res://assests/knightIdleStance.2.png" id="3_bgjfv"]
+[ext_resource type="Texture2D" uid="uid://0ovk8i3cxpk6" path="res://assests/knightIdleStance.3.png" id="4_qxuko"]
+[ext_resource type="Texture2D" uid="uid://7o8kggiinkp" path="res://assests/knightIdleStance.4.png" id="5_okoxy"]
+[ext_resource type="Texture2D" uid="uid://dvjw82d385i48" path="res://assests/knightIdleStance.5.png" id="6_fii0k"]
+[ext_resource type="Texture2D" uid="uid://dl14frxnmkt0b" path="res://assests/knightIdleStance.6.png" id="7_lwib2"]
+[ext_resource type="Texture2D" uid="uid://bx18tuaoxhur3" path="res://assests/knightIdleStance.7.png" id="8_syqns"]
+[ext_resource type="Texture2D" uid="uid://da5mh7ps3gd1q" path="res://assests/knightIdleStance.9.png" id="9_q0xr7"]
+[ext_resource type="Texture2D" uid="uid://bnevn0j8hulqu" path="res://assests/knightIdleStance.8.png" id="10_8xv37"]
+[ext_resource type="Texture2D" uid="uid://dei1wwm0g5kp0" path="res://assests/knightIdleStance.10.png" id="11_i84w4"]
+[ext_resource type="Texture2D" uid="uid://ifx3rgy3c814" path="res://assests/Medieval_Castle_Asset_Pack/Tiles/arch_1.png" id="13_sdor1"]
+[ext_resource type="Texture2D" uid="uid://c0iyalhgyrn3u" path="res://assests/Medieval_Castle_Asset_Pack/Tiles/arch_2.png" id="14_2i6f6"]
+[ext_resource type="Texture2D" uid="uid://dca4lm6t4qdj5" path="res://assests/Medieval_Castle_Asset_Pack/Tiles/arch_3.png" id="15_62i76"]
+[ext_resource type="Texture2D" uid="uid://b8qi4f7bikvj8" path="res://assests/Medieval_Castle_Asset_Pack/Tiles/arch_4.png" id="16_53p52"]
+[ext_resource type="Texture2D" uid="uid://4cppgn218ah8" path="res://assests/Medieval_Castle_Asset_Pack/Tiles/arch_7.png" id="17_igobd"]
+[ext_resource type="Texture2D" uid="uid://driu37h5655na" path="res://assests/Medieval_Castle_Asset_Pack/Tiles/arch_5.png" id="18_ind7n"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_jucke"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_wkt0t")
+"texture": ExtResource("2_uycfm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_bgjfv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_qxuko")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_okoxy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_fii0k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_lwib2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_syqns")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_q0xr7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_8xv37")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_i84w4")
 }],
 "loop": true,
 "name": &"idle",
@@ -36,15 +76,18 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_5ymsr")
 
-[node name="playerSprite" type="AnimatedSprite2D" parent="."]
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+script = ExtResource("1_4lljd")
+
+[node name="playerSprite" type="AnimatedSprite2D" parent="CharacterBody2D"]
 z_index = 2
-position = Vector2(160, 177)
+position = Vector2(131, 190)
 sprite_frames = SubResource("SpriteFrames_jucke")
 animation = &"idle"
+frame = 5
+frame_progress = 0.397128
 offset = Vector2(0, -30)
-script = ExtResource("4_bt80r")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(160, 101)
@@ -52,12 +95,36 @@ zoom = Vector2(3.6, 3.3)
 
 [node name="enviroment" type="Node" parent="."]
 
-[node name="background_room" type="Sprite2D" parent="enviroment"]
-position = Vector2(160, 100)
-texture = ExtResource("3_gcm06")
-
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
 navigation_polygon = SubResource("NavigationPolygon_51xux")
 
 [node name="Line2D" type="Line2D" parent="."]
 z_index = 4
+
+[node name="Arch1" type="Sprite2D" parent="."]
+position = Vector2(98, 101)
+texture = ExtResource("13_sdor1")
+
+[node name="Arch2" type="Sprite2D" parent="."]
+position = Vector2(130, 94)
+texture = ExtResource("14_2i6f6")
+
+[node name="Arch3" type="Sprite2D" parent="."]
+position = Vector2(163, 100)
+texture = ExtResource("15_62i76")
+
+[node name="Arch4" type="Sprite2D" parent="."]
+position = Vector2(93, 132)
+texture = ExtResource("16_53p52")
+
+[node name="Arch7" type="Sprite2D" parent="."]
+position = Vector2(91, 164)
+texture = ExtResource("17_igobd")
+
+[node name="Arch5" type="Sprite2D" parent="."]
+position = Vector2(170, 131)
+texture = ExtResource("18_ind7n")
+
+[node name="Arch8" type="Sprite2D" parent="."]
+position = Vector2(168, 162)
+texture = ExtResource("17_igobd")

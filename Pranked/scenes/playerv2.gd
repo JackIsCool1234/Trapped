@@ -8,6 +8,7 @@ var snapPosition = Vector2()
 #var path : PackedVector2Array
 
 @export var speed = 100
+@onready var _animation = $playerSprite
 
 #enum{idle, walk, interact, speak}
 
@@ -57,6 +58,10 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	if velocity.x != 0:
+		_animation.play("walk")
+	else:
+		_animation.play("idle")
 	if(position != destination):
 		distance = Vector2(destination - position)
 		velocity.x = distance.normalized().x * speed

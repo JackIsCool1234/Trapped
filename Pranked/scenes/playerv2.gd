@@ -7,7 +7,7 @@ var snapPosition = Vector2()
 
 #var path : PackedVector2Array
 
-@export var speed = 100
+@export var speed = 75
 @onready var _animation = $playerSprite
 
 #enum{idle, walk, interact, speak}

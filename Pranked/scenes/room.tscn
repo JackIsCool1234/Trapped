@@ -1,4 +1,4 @@
-[gd_scene load_steps=44 format=3 uid="uid://dft06l7j2iur2"]
+[gd_scene load_steps=47 format=3 uid="uid://dft06l7j2iur2"]
 
 [ext_resource type="Script" path="res://scenes/playerv2.gd" id="1_4lljd"]
 [ext_resource type="Texture2D" uid="uid://b8tabpbw1gpk2" path="res://assests/Player Design .v1.png" id="2_obdvv"]
@@ -41,6 +41,8 @@
 [ext_resource type="Texture2D" uid="uid://c7cg55rn7fay2" path="res://assests/Medieval_Castle_Asset_Pack/Tiles/window_glass_1.png" id="39_yq52p"]
 [ext_resource type="Texture2D" uid="uid://tqqytkixurv2" path="res://assests/Medieval_Castle_Asset_Pack/Tiles/window_glass_tall_2.png" id="40_bpe8y"]
 [ext_resource type="Texture2D" uid="uid://ge7omuajv1fw" path="res://assests/Medieval_Castle_Asset_Pack/Tiles/window_glass_tall_3.png" id="41_ribnc"]
+[ext_resource type="Texture2D" uid="uid://djb651h8od5jb" path="res://assests/Medieval_Castle_Asset_Pack/Decorations/bookshelf_1.png" id="42_ut1sh"]
+[ext_resource type="Texture2D" uid="uid://dwlw467s2h73" path="res://assests/Medieval_Castle_Asset_Pack/Decorations/flag_blue.png" id="43_p546t"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_jucke"]
 animations = [{
@@ -88,6 +90,9 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8sxtv"]
+height = 42.0
+
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_51xux"]
 outlines = Array[PackedVector2Array]([PackedVector2Array(65, 154, 260, 154, 319, 200, 1, 200)])
 source_geometry_group_name = &"navigation_polygon_source_group"
@@ -101,22 +106,25 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+position = Vector2(160, 139)
 script = ExtResource("1_4lljd")
 
 [node name="playerSprite" type="AnimatedSprite2D" parent="CharacterBody2D"]
 z_index = 2
-position = Vector2(161, 141)
+position = Vector2(0, 2)
 sprite_frames = SubResource("SpriteFrames_jucke")
 animation = &"idle"
 frame = 5
 frame_progress = 0.397128
-offset = Vector2(0, -30)
+offset = Vector2(0, -22)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(0, -17)
+shape = SubResource("CapsuleShape2D_8sxtv")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(160, 101)
 zoom = Vector2(3.6, 3.3)
-
-[node name="enviroment" type="Node" parent="."]
 
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
 navigation_polygon = SubResource("NavigationPolygon_51xux")
@@ -160,12 +168,12 @@ texture = ExtResource("15_nlqr5")
 position = Vector2(208, 16)
 texture = ExtResource("15_nlqr5")
 
-[node name="Blank8" type="Sprite2D" parent="."]
-position = Vector2(240, 16)
-texture = ExtResource("15_nlqr5")
-
 [node name="Blank9" type="Sprite2D" parent="."]
 position = Vector2(272, 16)
+texture = ExtResource("15_nlqr5")
+
+[node name="Blank8" type="Sprite2D" parent="."]
+position = Vector2(240, 16)
 texture = ExtResource("15_nlqr5")
 
 [node name="Blank10" type="Sprite2D" parent="."]
@@ -403,3 +411,11 @@ texture = ExtResource("41_ribnc")
 [node name="Brick12" type="Sprite2D" parent="."]
 position = Vector2(272, 120)
 texture = ExtResource("32_j522i")
+
+[node name="Bookshelf1" type="Sprite2D" parent="."]
+position = Vector2(128, 97)
+texture = ExtResource("42_ut1sh")
+
+[node name="FlagBlue" type="Sprite2D" parent="."]
+position = Vector2(286, 85)
+texture = ExtResource("43_p546t")

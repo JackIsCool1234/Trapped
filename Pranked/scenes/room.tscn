@@ -1,4 +1,4 @@
-[gd_scene load_steps=58 format=3 uid="uid://dft06l7j2iur2"]
+[gd_scene load_steps=57 format=3 uid="uid://dft06l7j2iur2"]
 
 [ext_resource type="Script" path="res://scenes/playerv2.gd" id="1_4lljd"]
 [ext_resource type="Texture2D" uid="uid://bmw0tg4u6unbg" path="res://assests/knightIdleStance.1.png" id="2_uycfm"]
@@ -33,15 +33,9 @@
 [ext_resource type="Texture2D" uid="uid://b3hrj04xnwbw0" path="res://assests/knightWalk.9.png" id="20_cpw7c"]
 [ext_resource type="Texture2D" uid="uid://cpslvpq0dg6wn" path="res://assests/knighWalk.10.png" id="21_s3swm"]
 [ext_resource type="Texture2D" uid="uid://b3v7dxq5dlosy" path="res://assests/Medieval_Castle_Asset_Pack/Tiles/arch_6.png" id="24_ht2qg"]
-[ext_resource type="Texture2D" uid="uid://bir2yfmqwaju" path="res://assests/Medieval_Castle_Asset_Pack/Tiles/ceiling_4.png" id="25_1r0er"]
-[ext_resource type="Texture2D" uid="uid://cgfr4kct1phif" path="res://assests/Medieval_Castle_Asset_Pack/Tiles/floor_tile_4.png" id="26_3udqd"]
-[ext_resource type="Texture2D" uid="uid://deq1qeuwgbe5h" path="res://assests/Medieval_Castle_Asset_Pack/Tiles/floor_tile_1.png" id="27_nndiu"]
 [ext_resource type="Texture2D" uid="uid://b7yyuldwnx8hk" path="res://assests/Medieval_Castle_Asset_Pack/Tiles/ceiling_2.png" id="28_6t2r0"]
 [ext_resource type="Texture2D" uid="uid://dikiwm3o335l4" path="res://assests/Medieval_Castle_Asset_Pack/Tiles/ceiling_3.png" id="29_imwtr"]
-[ext_resource type="Texture2D" uid="uid://bakju1pck03o4" path="res://assests/Medieval_Castle_Asset_Pack/Tiles/ceiling_1.png" id="30_vgjsh"]
-[ext_resource type="Texture2D" uid="uid://b3vce0nf863fk" path="res://assests/Medieval_Castle_Asset_Pack/Tiles/brick_13.png" id="31_lj3ai"]
 [ext_resource type="Texture2D" uid="uid://144eyqkgpie8" path="res://assests/Medieval_Castle_Asset_Pack/Tiles/brick_1.png" id="32_j522i"]
-[ext_resource type="Texture2D" uid="uid://cxlfek4ev0c6k" path="res://assests/Medieval_Castle_Asset_Pack/Tiles/brick_15.png" id="33_8ayi1"]
 [ext_resource type="Texture2D" uid="uid://i5dkvc8k8gs1" path="res://assests/Medieval_Castle_Asset_Pack/Tiles/brick_2.png" id="34_jmagk"]
 [ext_resource type="Texture2D" uid="uid://djrk4herniegp" path="res://assests/Medieval_Castle_Asset_Pack/Tiles/damaged_brick_1.png" id="35_8fkjg"]
 [ext_resource type="Texture2D" uid="uid://ckrj4mu06xkwn" path="res://assests/Medieval_Castle_Asset_Pack/Tiles/damaged_brick_2.png" id="36_6r45t"]
@@ -54,6 +48,11 @@
 [ext_resource type="Texture2D" uid="uid://dwlw467s2h73" path="res://assests/Medieval_Castle_Asset_Pack/Decorations/flag_blue.png" id="43_p546t"]
 [ext_resource type="Texture2D" uid="uid://bx4cxpi6lof4r" path="res://assests/Medieval_Castle_Asset_Pack/Decorations/bag_2.png" id="53_sx4mc"]
 [ext_resource type="Texture2D" uid="uid://dvdq7b4snnqqb" path="res://assests/Medieval_Castle_Asset_Pack/Decorations/Animated Decorations/lever_wall/lever_wall_1.png" id="54_e1ydc"]
+[ext_resource type="Texture2D" uid="uid://yhc8gd65vodb" path="res://assests/Medieval_Castle_Asset_Pack/Tiles/brick_12.png" id="55_dqvvf"]
+[ext_resource type="Texture2D" uid="uid://4kuui57esdup" path="res://assests/Medieval_Castle_Asset_Pack/Tiles/brick_8.png" id="56_gii1d"]
+[ext_resource type="Texture2D" uid="uid://c701lvrdss41x" path="res://assests/Medieval_Castle_Asset_Pack/Tiles/ceiling_corner_right.png" id="57_0r551"]
+[ext_resource type="Texture2D" uid="uid://dho4ew0hlke7s" path="res://assests/Medieval_Castle_Asset_Pack/Tiles/brick_6.png" id="57_0y8t5"]
+[ext_resource type="Texture2D" uid="uid://qkgjhhyegfcu" path="res://assests/Medieval_Castle_Asset_Pack/Tiles/floor_tile_corner_right.png" id="59_j1gvl"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_jucke"]
 animations = [{
@@ -147,6 +146,10 @@ grow_vertical = 2
 position = Vector2(160, 139)
 script = ExtResource("1_4lljd")
 
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
+position = Vector2(0, -38)
+zoom = Vector2(3.6, 3.3)
+
 [node name="playerSprite" type="AnimatedSprite2D" parent="CharacterBody2D"]
 z_index = 2
 position = Vector2(0, 2)
@@ -159,10 +162,6 @@ offset = Vector2(0, -22)
 position = Vector2(0, -17)
 shape = SubResource("CapsuleShape2D_8sxtv")
 
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(160, 101)
-zoom = Vector2(3.6, 3.3)
-
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
 navigation_polygon = SubResource("NavigationPolygon_51xux")
 
@@ -174,47 +173,47 @@ position = Vector2(160, 90)
 texture = ExtResource("13_tx2fy")
 
 [node name="Layer2" type="Sprite2D" parent="."]
-position = Vector2(160, 94)
+position = Vector2(158, 96)
 texture = ExtResource("14_l8b0d")
 
 [node name="Blank" type="Sprite2D" parent="."]
-position = Vector2(16, 16)
+position = Vector2(16, -8)
 texture = ExtResource("15_nlqr5")
 
 [node name="Blank2" type="Sprite2D" parent="."]
-position = Vector2(48, 16)
+position = Vector2(48, -8)
 texture = ExtResource("15_nlqr5")
 
 [node name="Blank3" type="Sprite2D" parent="."]
-position = Vector2(80, 16)
+position = Vector2(80, -8)
 texture = ExtResource("15_nlqr5")
 
 [node name="Blank4" type="Sprite2D" parent="."]
-position = Vector2(112, 16)
+position = Vector2(112, -8)
 texture = ExtResource("15_nlqr5")
 
 [node name="Blank5" type="Sprite2D" parent="."]
-position = Vector2(144, 16)
+position = Vector2(144, -8)
 texture = ExtResource("15_nlqr5")
 
 [node name="Blank6" type="Sprite2D" parent="."]
-position = Vector2(176, 16)
+position = Vector2(176, -8)
 texture = ExtResource("15_nlqr5")
 
 [node name="Blank7" type="Sprite2D" parent="."]
-position = Vector2(208, 16)
+position = Vector2(208, -8)
 texture = ExtResource("15_nlqr5")
 
 [node name="Blank9" type="Sprite2D" parent="."]
-position = Vector2(272, 16)
+position = Vector2(272, -8)
 texture = ExtResource("15_nlqr5")
 
 [node name="Blank8" type="Sprite2D" parent="."]
-position = Vector2(240, 16)
+position = Vector2(240, -8)
 texture = ExtResource("15_nlqr5")
 
 [node name="Blank10" type="Sprite2D" parent="."]
-position = Vector2(304, 16)
+position = Vector2(304, -8)
 texture = ExtResource("15_nlqr5")
 
 [node name="Blank11" type="Sprite2D" parent="."]
@@ -317,18 +316,6 @@ texture = ExtResource("16_53p52")
 position = Vector2(169, 120)
 texture = ExtResource("24_ht2qg")
 
-[node name="Ceiling4" type="Sprite2D" parent="."]
-position = Vector2(304, 24)
-texture = ExtResource("25_1r0er")
-
-[node name="FloorTile10" type="Sprite2D" parent="."]
-position = Vector2(304, 152)
-texture = ExtResource("26_3udqd")
-
-[node name="FloorTile1" type="Sprite2D" parent="."]
-position = Vector2(16, 152)
-texture = ExtResource("27_nndiu")
-
 [node name="Ceiling2" type="Sprite2D" parent="."]
 position = Vector2(272, 24)
 texture = ExtResource("28_6t2r0")
@@ -361,14 +348,6 @@ texture = ExtResource("28_6t2r0")
 position = Vector2(48, 24)
 texture = ExtResource("29_imwtr")
 
-[node name="Ceiling1" type="Sprite2D" parent="."]
-position = Vector2(16, 24)
-texture = ExtResource("30_vgjsh")
-
-[node name="Brick13" type="Sprite2D" parent="."]
-position = Vector2(16, 56)
-texture = ExtResource("31_lj3ai")
-
 [node name="Brick1" type="Sprite2D" parent="."]
 position = Vector2(16, 88)
 texture = ExtResource("32_j522i")
@@ -376,10 +355,6 @@ texture = ExtResource("32_j522i")
 [node name="Brick2" type="Sprite2D" parent="."]
 position = Vector2(48, 56)
 texture = ExtResource("32_j522i")
-
-[node name="Brick15" type="Sprite2D" parent="."]
-position = Vector2(16, 120)
-texture = ExtResource("33_8ayi1")
 
 [node name="Brick3" type="Sprite2D" parent="."]
 position = Vector2(48, 88)
@@ -425,24 +400,48 @@ texture = ExtResource("32_j522i")
 position = Vector2(144, 120)
 texture = ExtResource("34_jmagk")
 
+[node name="Blank21" type="Sprite2D" parent="."]
+position = Vector2(496, 56)
+texture = ExtResource("15_nlqr5")
+
+[node name="Brick26" type="Sprite2D" parent="."]
+position = Vector2(487, 56)
+texture = ExtResource("57_0y8t5")
+
+[node name="Brick29" type="Sprite2D" parent="."]
+position = Vector2(464, 56)
+texture = ExtResource("34_jmagk")
+
 [node name="Brick14" type="Sprite2D" parent="."]
-position = Vector2(304, 56)
+position = Vector2(474, 56)
 texture = ExtResource("37_5wv7x")
 
+[node name="Blank23" type="Sprite2D" parent="."]
+position = Vector2(496, 120)
+texture = ExtResource("15_nlqr5")
+
+[node name="Brick27" type="Sprite2D" parent="."]
+position = Vector2(487, 120)
+texture = ExtResource("55_dqvvf")
+
+[node name="Brick30" type="Sprite2D" parent="."]
+position = Vector2(464, 120)
+texture = ExtResource("32_j522i")
+
 [node name="Brick16" type="Sprite2D" parent="."]
-position = Vector2(304, 120)
+position = Vector2(474, 120)
 texture = ExtResource("38_kyeyo")
 
 [node name="WindowGlass1" type="Sprite2D" parent="."]
-position = Vector2(80, 56)
+position = Vector2(336, 56)
 texture = ExtResource("39_yq52p")
 
 [node name="WindowGlassTall2" type="Sprite2D" parent="."]
-position = Vector2(80, 88)
+position = Vector2(336, 88)
 texture = ExtResource("40_bpe8y")
 
 [node name="WindowGlassTall3" type="Sprite2D" parent="."]
-position = Vector2(80, 120)
+position = Vector2(336, 120)
 texture = ExtResource("41_ribnc")
 
 [node name="Brick12" type="Sprite2D" parent="."]
@@ -453,9 +452,21 @@ texture = ExtResource("32_j522i")
 position = Vector2(128, 98)
 texture = ExtResource("42_ut1sh")
 
+[node name="Brick17" type="Sprite2D" parent="."]
+position = Vector2(304, 56)
+texture = ExtResource("32_j522i")
+
+[node name="Brick19" type="Sprite2D" parent="."]
+position = Vector2(304, 120)
+texture = ExtResource("32_j522i")
+
 [node name="FlagBlue" type="Sprite2D" parent="."]
-position = Vector2(284, 89)
+position = Vector2(288, 89)
 texture = ExtResource("43_p546t")
+
+[node name="WindowGlassTall5" type="Sprite2D" parent="."]
+position = Vector2(80, 120)
+texture = ExtResource("41_ribnc")
 
 [node name="Bag2" type="Sprite2D" parent="."]
 position = Vector2(82, 126)
@@ -464,3 +475,279 @@ texture = ExtResource("53_sx4mc")
 [node name="LeverWall1" type="Sprite2D" parent="."]
 position = Vector2(247, 117)
 texture = ExtResource("54_e1ydc")
+
+[node name="Ceiling11" type="Sprite2D" parent="."]
+position = Vector2(304, 24)
+texture = ExtResource("29_imwtr")
+
+[node name="Ceiling12" type="Sprite2D" parent="."]
+position = Vector2(336, 24)
+texture = ExtResource("28_6t2r0")
+
+[node name="Ceiling13" type="Sprite2D" parent="."]
+position = Vector2(368, 24)
+texture = ExtResource("29_imwtr")
+
+[node name="Ceiling14" type="Sprite2D" parent="."]
+position = Vector2(400, 24)
+texture = ExtResource("28_6t2r0")
+
+[node name="Brick20" type="Sprite2D" parent="."]
+position = Vector2(400, 56)
+texture = ExtResource("34_jmagk")
+
+[node name="Brick21" type="Sprite2D" parent="."]
+position = Vector2(400, 88)
+texture = ExtResource("32_j522i")
+
+[node name="Brick22" type="Sprite2D" parent="."]
+position = Vector2(400, 120)
+texture = ExtResource("34_jmagk")
+
+[node name="Brick23" type="Sprite2D" parent="."]
+position = Vector2(368, 56)
+texture = ExtResource("32_j522i")
+
+[node name="Brick24" type="Sprite2D" parent="."]
+position = Vector2(368, 88)
+texture = ExtResource("34_jmagk")
+
+[node name="Brick25" type="Sprite2D" parent="."]
+position = Vector2(368, 120)
+texture = ExtResource("32_j522i")
+
+[node name="FloorTile11" type="Sprite2D" parent="."]
+position = Vector2(304, 152)
+texture = ExtResource("18_m1byn")
+
+[node name="FloorTile12" type="Sprite2D" parent="."]
+position = Vector2(336, 152)
+texture = ExtResource("17_we8qy")
+
+[node name="FloorTile13" type="Sprite2D" parent="."]
+position = Vector2(368, 152)
+texture = ExtResource("18_m1byn")
+
+[node name="FloorTile14" type="Sprite2D" parent="."]
+position = Vector2(400, 152)
+texture = ExtResource("17_we8qy")
+
+[node name="Blank22" type="Sprite2D" parent="."]
+position = Vector2(496, 88)
+texture = ExtResource("15_nlqr5")
+
+[node name="Brick31" type="Sprite2D" parent="Blank22"]
+position = Vector2(-32, 0)
+texture = ExtResource("32_j522i")
+
+[node name="Brick28" type="Sprite2D" parent="."]
+position = Vector2(487, 88)
+texture = ExtResource("56_gii1d")
+
+[node name="FloorTileCornerRight" type="Sprite2D" parent="."]
+position = Vector2(496, 152)
+texture = ExtResource("59_j1gvl")
+
+[node name="FloorTile15" type="Sprite2D" parent="."]
+position = Vector2(432, 152)
+texture = ExtResource("18_m1byn")
+
+[node name="FloorTile16" type="Sprite2D" parent="."]
+position = Vector2(464, 152)
+texture = ExtResource("17_we8qy")
+
+[node name="WindowGlass2" type="Sprite2D" parent="."]
+position = Vector2(80, 56)
+texture = ExtResource("39_yq52p")
+
+[node name="WindowGlassTall4" type="Sprite2D" parent="."]
+position = Vector2(80, 88)
+texture = ExtResource("40_bpe8y")
+
+[node name="CeilingCornerRight" type="Sprite2D" parent="."]
+position = Vector2(496, 24)
+texture = ExtResource("57_0r551")
+
+[node name="Ceiling15" type="Sprite2D" parent="."]
+position = Vector2(432, 24)
+texture = ExtResource("29_imwtr")
+
+[node name="Ceiling16" type="Sprite2D" parent="."]
+position = Vector2(464, 24)
+texture = ExtResource("28_6t2r0")
+
+[node name="WindowGlass3" type="Sprite2D" parent="."]
+position = Vector2(432, 56)
+texture = ExtResource("39_yq52p")
+
+[node name="WindowGlassTall6" type="Sprite2D" parent="."]
+position = Vector2(432, 88)
+texture = ExtResource("40_bpe8y")
+
+[node name="WindowGlassTall7" type="Sprite2D" parent="."]
+position = Vector2(432, 120)
+texture = ExtResource("41_ribnc")
+
+[node name="Brick13" type="Sprite2D" parent="."]
+position = Vector2(16, 56)
+texture = ExtResource("34_jmagk")
+
+[node name="Brick15" type="Sprite2D" parent="."]
+position = Vector2(16, 120)
+texture = ExtResource("34_jmagk")
+
+[node name="Ceiling17" type="Sprite2D" parent="."]
+position = Vector2(16, 24)
+texture = ExtResource("28_6t2r0")
+
+[node name="FloorTile10" type="Sprite2D" parent="."]
+position = Vector2(16, 152)
+texture = ExtResource("17_we8qy")
+
+[node name="WindowGlass4" type="Sprite2D" parent="."]
+position = Vector2(-16, 56)
+texture = ExtResource("39_yq52p")
+
+[node name="WindowGlassTall8" type="Sprite2D" parent="."]
+position = Vector2(-16, 88)
+texture = ExtResource("40_bpe8y")
+
+[node name="WindowGlassTall9" type="Sprite2D" parent="."]
+position = Vector2(-16, 120)
+texture = ExtResource("41_ribnc")
+
+[node name="Ceiling18" type="Sprite2D" parent="."]
+position = Vector2(-16, 24)
+texture = ExtResource("29_imwtr")
+
+[node name="FloorTile17" type="Sprite2D" parent="."]
+position = Vector2(-16, 152)
+texture = ExtResource("18_m1byn")
+
+[node name="Blank24" type="Sprite2D" parent="."]
+position = Vector2(336, -8)
+texture = ExtResource("15_nlqr5")
+
+[node name="Blank25" type="Sprite2D" parent="."]
+position = Vector2(368, -8)
+texture = ExtResource("15_nlqr5")
+
+[node name="Blank26" type="Sprite2D" parent="."]
+position = Vector2(400, -8)
+texture = ExtResource("15_nlqr5")
+
+[node name="Blank27" type="Sprite2D" parent="."]
+position = Vector2(432, -8)
+texture = ExtResource("15_nlqr5")
+
+[node name="Blank28" type="Sprite2D" parent="."]
+position = Vector2(464, -8)
+texture = ExtResource("15_nlqr5")
+
+[node name="Blank29" type="Sprite2D" parent="."]
+position = Vector2(496, -8)
+texture = ExtResource("15_nlqr5")
+
+[node name="Blank30" type="Sprite2D" parent="."]
+position = Vector2(528, -8)
+texture = ExtResource("15_nlqr5")
+
+[node name="Blank31" type="Sprite2D" parent="."]
+position = Vector2(528, 24)
+texture = ExtResource("15_nlqr5")
+
+[node name="Blank32" type="Sprite2D" parent="."]
+position = Vector2(528, 56)
+texture = ExtResource("15_nlqr5")
+
+[node name="Blank33" type="Sprite2D" parent="."]
+position = Vector2(528, 88)
+texture = ExtResource("15_nlqr5")
+
+[node name="Blank34" type="Sprite2D" parent="."]
+position = Vector2(528, 120)
+texture = ExtResource("15_nlqr5")
+
+[node name="Blank35" type="Sprite2D" parent="."]
+position = Vector2(528, 152)
+texture = ExtResource("15_nlqr5")
+
+[node name="Blank36" type="Sprite2D" parent="."]
+position = Vector2(528, 184)
+texture = ExtResource("15_nlqr5")
+
+[node name="Blank37" type="Sprite2D" parent="."]
+position = Vector2(496, 184)
+texture = ExtResource("15_nlqr5")
+
+[node name="Blank38" type="Sprite2D" parent="."]
+position = Vector2(464, 184)
+texture = ExtResource("15_nlqr5")
+
+[node name="Blank39" type="Sprite2D" parent="."]
+position = Vector2(432, 184)
+texture = ExtResource("15_nlqr5")
+
+[node name="Blank40" type="Sprite2D" parent="."]
+position = Vector2(400, 184)
+texture = ExtResource("15_nlqr5")
+
+[node name="Blank41" type="Sprite2D" parent="."]
+position = Vector2(368, 184)
+texture = ExtResource("15_nlqr5")
+
+[node name="Blank42" type="Sprite2D" parent="."]
+position = Vector2(336, 184)
+texture = ExtResource("15_nlqr5")
+
+[node name="Blank43" type="Sprite2D" parent="."]
+position = Vector2(-16, 184)
+texture = ExtResource("15_nlqr5")
+
+[node name="Blank44" type="Sprite2D" parent="."]
+position = Vector2(-48, 184)
+texture = ExtResource("15_nlqr5")
+
+[node name="Blank45" type="Sprite2D" parent="."]
+position = Vector2(-80, 184)
+texture = ExtResource("15_nlqr5")
+
+[node name="Blank46" type="Sprite2D" parent="."]
+position = Vector2(-112, 184)
+texture = ExtResource("15_nlqr5")
+
+[node name="Blank47" type="Sprite2D" parent="."]
+position = Vector2(-112, 152)
+texture = ExtResource("15_nlqr5")
+
+[node name="Blank48" type="Sprite2D" parent="."]
+position = Vector2(-112, 120)
+texture = ExtResource("15_nlqr5")
+
+[node name="Blank49" type="Sprite2D" parent="."]
+position = Vector2(-112, 88)
+texture = ExtResource("15_nlqr5")
+
+[node name="Blank50" type="Sprite2D" parent="."]
+position = Vector2(-112, 56)
+texture = ExtResource("15_nlqr5")
+
+[node name="Blank51" type="Sprite2D" parent="."]
+position = Vector2(-112, 24)
+texture = ExtResource("15_nlqr5")
+
+[node name="Blank52" type="Sprite2D" parent="."]
+position = Vector2(-112, -8)
+texture = ExtResource("15_nlqr5")
+
+[node name="Blank53" type="Sprite2D" parent="."]
+position = Vector2(-80, -8)
+texture = ExtResource("15_nlqr5")
+
+[node name="Blank54" type="Sprite2D" parent="."]
+position = Vector2(-48, -8)
+texture = ExtResource("15_nlqr5")
+
+[node name="Blank55" type="Sprite2D" parent="."]
+position = Vector2(-16, -8)
+texture = ExtResource("15_nlqr5")

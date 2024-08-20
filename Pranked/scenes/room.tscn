@@ -1,37 +1,37 @@
-[gd_scene load_steps=57 format=3 uid="uid://dft06l7j2iur2"]
+[gd_scene load_steps=59 format=3 uid="uid://dft06l7j2iur2"]
 
 [ext_resource type="Script" path="res://scenes/playerv2.gd" id="1_4lljd"]
-[ext_resource type="Texture2D" path="res://assests/knightIdleStance.1.png" id="2_uycfm"]
-[ext_resource type="Texture2D" path="res://assests/knightIdleStance.2.png" id="3_bgjfv"]
-[ext_resource type="Texture2D" path="res://assests/knightIdleStance.3.png" id="4_qxuko"]
-[ext_resource type="Texture2D" path="res://assests/knightIdleStance.4.png" id="5_okoxy"]
-[ext_resource type="Texture2D" path="res://assests/knightIdleStance.5.png" id="6_fii0k"]
-[ext_resource type="Texture2D" path="res://assests/knightIdleStance.6.png" id="7_lwib2"]
-[ext_resource type="Texture2D" path="res://assests/knightIdleStance.7.png" id="8_syqns"]
-[ext_resource type="Texture2D" path="res://assests/knightIdleStance.9.png" id="9_q0xr7"]
-[ext_resource type="Texture2D" path="res://assests/knightIdleStance.8.png" id="10_8xv37"]
-[ext_resource type="Texture2D" path="res://assests/knightIdleStance.10.png" id="11_i84w4"]
-[ext_resource type="Texture2D" path="res://assests/knightWalk.1.png" id="12_6r0yf"]
-[ext_resource type="Texture2D" path="res://assests/knightWalk.2.png" id="13_5yric"]
+[ext_resource type="Texture2D" uid="uid://bmw0tg4u6unbg" path="res://assests/knightIdleStance.1.png" id="2_uycfm"]
+[ext_resource type="Texture2D" uid="uid://bkcj0jmxary0x" path="res://assests/knightIdleStance.2.png" id="3_bgjfv"]
+[ext_resource type="Texture2D" uid="uid://0ovk8i3cxpk6" path="res://assests/knightIdleStance.3.png" id="4_qxuko"]
+[ext_resource type="Texture2D" uid="uid://7o8kggiinkp" path="res://assests/knightIdleStance.4.png" id="5_okoxy"]
+[ext_resource type="Texture2D" uid="uid://dvjw82d385i48" path="res://assests/knightIdleStance.5.png" id="6_fii0k"]
+[ext_resource type="Texture2D" uid="uid://dl14frxnmkt0b" path="res://assests/knightIdleStance.6.png" id="7_lwib2"]
+[ext_resource type="Texture2D" uid="uid://bx18tuaoxhur3" path="res://assests/knightIdleStance.7.png" id="8_syqns"]
+[ext_resource type="Texture2D" uid="uid://da5mh7ps3gd1q" path="res://assests/knightIdleStance.9.png" id="9_q0xr7"]
+[ext_resource type="Texture2D" uid="uid://bnevn0j8hulqu" path="res://assests/knightIdleStance.8.png" id="10_8xv37"]
+[ext_resource type="Texture2D" uid="uid://dei1wwm0g5kp0" path="res://assests/knightIdleStance.10.png" id="11_i84w4"]
+[ext_resource type="Texture2D" uid="uid://cxrdy8w4w7wwo" path="res://assests/knightWalk.1.png" id="12_6r0yf"]
+[ext_resource type="Texture2D" uid="uid://bjkjbvf3qhu4e" path="res://assests/knightWalk.2.png" id="13_5yric"]
 [ext_resource type="Texture2D" uid="uid://ifx3rgy3c814" path="res://assests/Medieval_Castle_Asset_Pack/Tiles/arch_1.png" id="13_sdor1"]
 [ext_resource type="Texture2D" uid="uid://5t7kp5ftlc31" path="res://assests/Medieval_Castle_Asset_Pack/Background/layer_1.png" id="13_tx2fy"]
 [ext_resource type="Texture2D" uid="uid://c0iyalhgyrn3u" path="res://assests/Medieval_Castle_Asset_Pack/Tiles/arch_2.png" id="14_2i6f6"]
 [ext_resource type="Texture2D" uid="uid://c78boiebw7quw" path="res://assests/Medieval_Castle_Asset_Pack/Background/layer_2.png" id="14_l8b0d"]
-[ext_resource type="Texture2D" path="res://assests/knightWalk.3.png" id="14_yxuaw"]
+[ext_resource type="Texture2D" uid="uid://ch1dgehpohad" path="res://assests/knightWalk.3.png" id="14_yxuaw"]
 [ext_resource type="Texture2D" uid="uid://dca4lm6t4qdj5" path="res://assests/Medieval_Castle_Asset_Pack/Tiles/arch_3.png" id="15_62i76"]
 [ext_resource type="Texture2D" uid="uid://dtchfskuj1c01" path="res://assests/Medieval_Castle_Asset_Pack/Tiles/blank.png" id="15_nlqr5"]
-[ext_resource type="Texture2D" path="res://assests/knightWalk.4.png" id="15_rskcc"]
+[ext_resource type="Texture2D" uid="uid://ja8kv20dkr7d" path="res://assests/knightWalk.4.png" id="15_rskcc"]
 [ext_resource type="Texture2D" uid="uid://b8qi4f7bikvj8" path="res://assests/Medieval_Castle_Asset_Pack/Tiles/arch_4.png" id="16_53p52"]
-[ext_resource type="Texture2D" path="res://assests/knightWalk.5.png" id="16_pqkj2"]
+[ext_resource type="Texture2D" uid="uid://cbvy1ojcp50u5" path="res://assests/knightWalk.5.png" id="16_pqkj2"]
 [ext_resource type="Texture2D" uid="uid://4cppgn218ah8" path="res://assests/Medieval_Castle_Asset_Pack/Tiles/arch_7.png" id="17_igobd"]
-[ext_resource type="Texture2D" path="res://assests/knightWalk.6.png" id="17_ka1fh"]
+[ext_resource type="Texture2D" uid="uid://cldvji74lv8bh" path="res://assests/knightWalk.6.png" id="17_ka1fh"]
 [ext_resource type="Texture2D" uid="uid://1oik544yto1l" path="res://assests/Medieval_Castle_Asset_Pack/Tiles/floor_tile_2.png" id="17_we8qy"]
-[ext_resource type="Texture2D" path="res://assests/knightWalk.7.png" id="18_6riuo"]
+[ext_resource type="Texture2D" uid="uid://dn8trkv20cvx1" path="res://assests/knightWalk.7.png" id="18_6riuo"]
 [ext_resource type="Texture2D" uid="uid://driu37h5655na" path="res://assests/Medieval_Castle_Asset_Pack/Tiles/arch_5.png" id="18_ind7n"]
 [ext_resource type="Texture2D" uid="uid://diasynr88pkmd" path="res://assests/Medieval_Castle_Asset_Pack/Tiles/floor_tile_3.png" id="18_m1byn"]
-[ext_resource type="Texture2D" path="res://assests/knightWalk.8.png" id="19_mnale"]
-[ext_resource type="Texture2D" path="res://assests/knightWalk.9.png" id="20_cpw7c"]
-[ext_resource type="Texture2D" path="res://assests/knighWalk.10.png" id="21_s3swm"]
+[ext_resource type="Texture2D" uid="uid://rg2kk7brfvim" path="res://assests/knightWalk.8.png" id="19_mnale"]
+[ext_resource type="Texture2D" uid="uid://b3hrj04xnwbw0" path="res://assests/knightWalk.9.png" id="20_cpw7c"]
+[ext_resource type="Texture2D" uid="uid://cpslvpq0dg6wn" path="res://assests/knighWalk.10.png" id="21_s3swm"]
 [ext_resource type="Texture2D" uid="uid://b3v7dxq5dlosy" path="res://assests/Medieval_Castle_Asset_Pack/Tiles/arch_6.png" id="24_ht2qg"]
 [ext_resource type="Texture2D" uid="uid://b7yyuldwnx8hk" path="res://assests/Medieval_Castle_Asset_Pack/Tiles/ceiling_2.png" id="28_6t2r0"]
 [ext_resource type="Texture2D" uid="uid://dikiwm3o335l4" path="res://assests/Medieval_Castle_Asset_Pack/Tiles/ceiling_3.png" id="29_imwtr"]
@@ -48,6 +48,8 @@
 [ext_resource type="Texture2D" uid="uid://dwlw467s2h73" path="res://assests/Medieval_Castle_Asset_Pack/Decorations/flag_blue.png" id="43_p546t"]
 [ext_resource type="Texture2D" uid="uid://bx4cxpi6lof4r" path="res://assests/Medieval_Castle_Asset_Pack/Decorations/bag_2.png" id="53_sx4mc"]
 [ext_resource type="Texture2D" uid="uid://dvdq7b4snnqqb" path="res://assests/Medieval_Castle_Asset_Pack/Decorations/Animated Decorations/lever_wall/lever_wall_1.png" id="54_e1ydc"]
+[ext_resource type="Texture2D" uid="uid://dlakpxclawscu" path="res://assests/shortPot.png" id="54_jbdp0"]
+[ext_resource type="Texture2D" uid="uid://dcqj04enk543k" path="res://assests/saltShaker.png" id="55_2n4cr"]
 [ext_resource type="Texture2D" uid="uid://yhc8gd65vodb" path="res://assests/Medieval_Castle_Asset_Pack/Tiles/brick_12.png" id="55_dqvvf"]
 [ext_resource type="Texture2D" uid="uid://4kuui57esdup" path="res://assests/Medieval_Castle_Asset_Pack/Tiles/brick_8.png" id="56_gii1d"]
 [ext_resource type="Texture2D" uid="uid://c701lvrdss41x" path="res://assests/Medieval_Castle_Asset_Pack/Tiles/ceiling_corner_right.png" id="57_0r551"]
@@ -751,3 +753,31 @@ texture = ExtResource("15_nlqr5")
 [node name="Blank55" type="Sprite2D" parent="."]
 position = Vector2(-16, -8)
 texture = ExtResource("15_nlqr5")
+
+[node name="ShortPot" type="Sprite2D" parent="."]
+position = Vector2(118, 53)
+texture = ExtResource("54_jbdp0")
+
+[node name="SaltShaker" type="Sprite2D" parent="."]
+position = Vector2(128, 58)
+texture = ExtResource("55_2n4cr")
+
+[node name="Brick18" type="Sprite2D" parent="."]
+position = Vector2(-48, 56)
+texture = ExtResource("32_j522i")
+
+[node name="Brick31" type="Sprite2D" parent="."]
+position = Vector2(-48, 120)
+texture = ExtResource("32_j522i")
+
+[node name="Brick32" type="Sprite2D" parent="."]
+position = Vector2(-48, 88)
+texture = ExtResource("34_jmagk")
+
+[node name="FloorTile18" type="Sprite2D" parent="."]
+position = Vector2(-48, 152)
+texture = ExtResource("17_we8qy")
+
+[node name="Ceiling19" type="Sprite2D" parent="."]
+position = Vector2(-48, 24)
+texture = ExtResource("28_6t2r0")

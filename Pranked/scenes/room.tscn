@@ -1,4 +1,4 @@
-[gd_scene load_steps=83 format=3 uid="uid://dft06l7j2iur2"]
+[gd_scene load_steps=85 format=3 uid="uid://dft06l7j2iur2"]
 
 [ext_resource type="Script" path="res://scenes/playerv2.gd" id="1_4lljd"]
 [ext_resource type="Texture2D" uid="uid://bmw0tg4u6unbg" path="res://assests/knightIdleStance.1.png" id="2_uycfm"]
@@ -78,6 +78,7 @@
 [ext_resource type="Texture2D" uid="uid://c4bgo7220lh5x" path="res://assests/Medieval_Castle_Asset_Pack/Decorations/wood_plank_2.png" id="77_hkwgy"]
 [ext_resource type="Texture2D" uid="uid://ckuw20vhags83" path="res://assests/Medieval_Castle_Asset_Pack/Decorations/wood_plank_1.png" id="78_d35vp"]
 [ext_resource type="Texture2D" uid="uid://c6oq0qqvn36xy" path="res://assests/Medieval_Castle_Asset_Pack/Decorations/wood_plank_3.png" id="79_2vit2"]
+[ext_resource type="Script" path="res://scenes/saltShaker.gd" id="80_8wr71"]
 [ext_resource type="Texture2D" uid="uid://sburxupvhelc" path="res://assests/Medieval_Castle_Asset_Pack/Decorations/flag_red.png" id="80_q40ka"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_jucke"]
@@ -159,6 +160,9 @@ height = 42.0
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_51xux"]
 outlines = Array[PackedVector2Array]([PackedVector2Array(65, 154, 260, 154, 319, 200, 1, 200)])
 source_geometry_group_name = &"navigation_polygon_source_group"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jo3kh"]
+size = Vector2(8, 10)
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -909,3 +913,12 @@ texture = ExtResource("43_p546t")
 [node name="DamagedBrick3" type="Sprite2D" parent="."]
 position = Vector2(368, 56)
 texture = ExtResource("35_8fkjg")
+
+[node name="Area2D" type="Node" parent="."]
+script = ExtResource("80_8wr71")
+
+[node name="Area2D" type="Area2D" parent="Area2D"]
+position = Vector2(133, 58)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D/Area2D"]
+shape = SubResource("RectangleShape2D_jo3kh")
